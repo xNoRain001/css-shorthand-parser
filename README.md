@@ -22,7 +22,7 @@ import shorthandParser from 'css-shorthand-parser'
 
 ```html
 <!-- Script -->
-<script src="../dist/css-shorthand-parser.js"></script>
+<script src="../dist/css-shorthand-parser.min.js"></script>
 ```
 
 ```js
