@@ -206,6 +206,31 @@ test('test border', () => {
       'border-width': '1px',
       'border-style': 'solid',
       'border-color': 'red'
+    },
+    '1px solid #000': {
+      'border-width': '1px',
+      'border-style': 'solid',
+      'border-color': '#000'
+    },
+    '1px solid rgb(0, 0, 0)': {
+      'border-width': '1px',
+      'border-style': 'solid',
+      'border-color': 'rgb(0,0,0)'
+    },
+    '1px solid rgba(255, 0, 0, 0.5)': {
+      'border-width': '1px',
+      'border-style': 'solid',
+      'border-color': 'rgba(255,0,0,0.5)'
+    },
+    '1px solid hsl(0, 100%, 50%)': {
+      'border-width': '1px',
+      'border-style': 'solid',
+      'border-color': 'hsl(0,100%,50%)'
+    },
+    '1px solid hsla(0, 100%, 50%, 0.5)': {
+      'border-width': '1px',
+      'border-style': 'solid',
+      'border-color': 'hsla(0,100%,50%,0.5)'
     }
   }
 
