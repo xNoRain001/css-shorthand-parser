@@ -238,3 +238,348 @@ test('test border', () => {
     expect(shorthandParser('border', key)).toStrictEqual(t[key])
   }
 })
+
+test('test border top', () => {
+  const t = {
+    '1px': {
+      'border-top-width': 'none',
+      'border-top-style': 'none',
+      'border-top-color': 'none'
+    },
+    '1px solid': {
+      'border-top-width': 'none',
+      'border-top-style': 'none',
+      'border-top-color': 'none'
+    },
+    '1px solid red': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'red'
+    },
+    '1px red solid': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'red'
+    },
+    'solid 1px red': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'red'
+    },
+    'solid red 1px': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'red'
+    },
+    'red 1px solid': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'red'
+    },
+    'red solid 1px': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'red'
+    },
+    '1px solid #000': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': '#000'
+    },
+    '1px solid rgb(0, 0, 0)': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'rgb(0,0,0)'
+    },
+    '1px solid rgba(255, 0, 0, 0.5)': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'rgba(255,0,0,0.5)'
+    },
+    '1px solid hsl(0, 100%, 50%)': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'hsl(0,100%,50%)'
+    },
+    '1px solid hsla(0, 100%, 50%, 0.5)': {
+      'border-top-width': '1px',
+      'border-top-style': 'solid',
+      'border-top-color': 'hsla(0,100%,50%,0.5)'
+    }
+  }
+
+  for (const key in t) {
+    expect(shorthandParser('border-top', key)).toStrictEqual(t[key])
+  }
+})
+
+test('test border right', () => {
+  const t = {
+    '1px': {
+      'border-right-width': 'none',
+      'border-right-style': 'none',
+      'border-right-color': 'none'
+    },
+    '1px solid': {
+      'border-right-width': 'none',
+      'border-right-style': 'none',
+      'border-right-color': 'none'
+    },
+    '1px solid red': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'red'
+    },
+    '1px red solid': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'red'
+    },
+    'solid 1px red': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'red'
+    },
+    'solid red 1px': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'red'
+    },
+    'red 1px solid': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'red'
+    },
+    'red solid 1px': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'red'
+    },
+    '1px solid #000': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': '#000'
+    },
+    '1px solid rgb(0, 0, 0)': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'rgb(0,0,0)'
+    },
+    '1px solid rgba(255, 0, 0, 0.5)': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'rgba(255,0,0,0.5)'
+    },
+    '1px solid hsl(0, 100%, 50%)': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'hsl(0,100%,50%)'
+    },
+    '1px solid hsla(0, 100%, 50%, 0.5)': {
+      'border-right-width': '1px',
+      'border-right-style': 'solid',
+      'border-right-color': 'hsla(0,100%,50%,0.5)'
+    }
+  }
+
+  for (const key in t) {
+    expect(shorthandParser('border-right', key)).toStrictEqual(t[key])
+  }
+})
+
+test('test border bottom', () => {
+  const t = {
+    '1px': {
+      'border-bottom-width': 'none',
+      'border-bottom-style': 'none',
+      'border-bottom-color': 'none'
+    },
+    '1px solid': {
+      'border-bottom-width': 'none',
+      'border-bottom-style': 'none',
+      'border-bottom-color': 'none'
+    },
+    '1px solid red': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'red'
+    },
+    '1px red solid': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'red'
+    },
+    'solid 1px red': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'red'
+    },
+    'solid red 1px': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'red'
+    },
+    'red 1px solid': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'red'
+    },
+    'red solid 1px': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'red'
+    },
+    '1px solid #000': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': '#000'
+    },
+    '1px solid rgb(0, 0, 0)': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'rgb(0,0,0)'
+    },
+    '1px solid rgba(255, 0, 0, 0.5)': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'rgba(255,0,0,0.5)'
+    },
+    '1px solid hsl(0, 100%, 50%)': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'hsl(0,100%,50%)'
+    },
+    '1px solid hsla(0, 100%, 50%, 0.5)': {
+      'border-bottom-width': '1px',
+      'border-bottom-style': 'solid',
+      'border-bottom-color': 'hsla(0,100%,50%,0.5)'
+    }
+  }
+
+  for (const key in t) {
+    expect(shorthandParser('border-bottom', key)).toStrictEqual(t[key])
+  }
+})
+
+test('test border left', () => {
+  const t = {
+    '1px': {
+      'border-left-width': 'none',
+      'border-left-style': 'none',
+      'border-left-color': 'none'
+    },
+    '1px solid': {
+      'border-left-width': 'none',
+      'border-left-style': 'none',
+      'border-left-color': 'none'
+    },
+    '1px solid red': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'red'
+    },
+    '1px red solid': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'red'
+    },
+    'solid 1px red': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'red'
+    },
+    'solid red 1px': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'red'
+    },
+    'red 1px solid': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'red'
+    },
+    'red solid 1px': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'red'
+    },
+    '1px solid #000': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': '#000'
+    },
+    '1px solid rgb(0, 0, 0)': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'rgb(0,0,0)'
+    },
+    '1px solid rgba(255, 0, 0, 0.5)': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'rgba(255,0,0,0.5)'
+    },
+    '1px solid hsl(0, 100%, 50%)': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'hsl(0,100%,50%)'
+    },
+    '1px solid hsla(0, 100%, 50%, 0.5)': {
+      'border-left-width': '1px',
+      'border-left-style': 'solid',
+      'border-left-color': 'hsla(0,100%,50%,0.5)'
+    }
+  }
+
+  for (const key in t) {
+    expect(shorthandParser('border-left', key)).toStrictEqual(t[key])
+  }
+})
+
+test('test list style', () => {
+  const t = {
+    'disc': {
+      'list-style-type': 'none',
+      'list-style-image': 'none',
+      'list-style-position': 'none'
+    },
+    'disc url("")': {
+      'list-style-type': 'none',
+      'list-style-image': 'none',
+      'list-style-position': 'none'
+    },
+    'disc url("") inside': {
+      'list-style-type': 'disc',
+      'list-style-image': 'url("")',
+      'list-style-position': 'inside'
+    },
+    'disc inside url("")': {
+      'list-style-type': 'disc',
+      'list-style-image': 'url("")',
+      'list-style-position': 'inside'
+    },
+    'inside disc url("")': {
+      'list-style-type': 'disc',
+      'list-style-image': 'url("")',
+      'list-style-position': 'inside'
+    },
+    'inside url("") disc': {
+      'list-style-type': 'disc',
+      'list-style-image': 'url("")',
+      'list-style-position': 'inside'
+    },
+    'url("") disc inside': {
+      'list-style-type': 'disc',
+      'list-style-image': 'url("")',
+      'list-style-position': 'inside'
+    },
+    'url("") inside disc': {
+      'list-style-type': 'disc',
+      'list-style-image': 'url("")',
+      'list-style-position': 'inside'
+    }
+  }
+
+  for (const key in t) {
+    expect(shorthandParser('list-style', key)).toStrictEqual(t[key])
+  }
+})
