@@ -1,4 +1,5 @@
 import { 
+  flexParser,
   listStyleParser, 
   commonBorderParser, 
   commonDirectionParser
@@ -47,6 +48,10 @@ const strategies = {
 
   'list-style' (value) {
     return listStyleParser(value)
+  },
+
+  flex (value) {
+    return flexParser(value)
   }
 }
 
