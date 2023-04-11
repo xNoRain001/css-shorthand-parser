@@ -1,0 +1,29 @@
+{
+  "name": "css-shorthand-parser",
+  "version": "0.0.0",
+  "description": "Parse css shorthand prop.",
+  "keywords": [
+    "css-shorthand-parser",
+    "css"
+  ],
+  "author": "xNoRain001",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xNoRain001/css-shorthand-parser.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c -w"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "jest": "^29.5.0",
+    "rollup": "^3.20.2"
+  }
+}
