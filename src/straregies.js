@@ -2,6 +2,7 @@ import {
   flexParser,
   animationParser,
   listStyleParser, 
+  backgroundParser,
   commonBorderParser, 
   commonDirectionParser
 } from "./parser"
@@ -57,7 +58,16 @@ const strategies = {
 
   animation (value) {
     return animationParser(value)
-  }
+  },
+
+  
+  background (value) {
+    return backgroundParser(value)
+  },
+
+  // font () {},
+  
+  // transition () {},
 }
 
 export default strategies

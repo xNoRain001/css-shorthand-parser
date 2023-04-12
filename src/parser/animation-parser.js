@@ -1,8 +1,9 @@
+import commonParser from "./common-parser"
 import { 
-  fillModeKeywordValues,
-  directionKeywordValues,
-  playStateKeywordValues,
-  timingFunctionKeywordValues
+  animationFillModeKeywordValues,
+  animationDirectionKeywordValues,
+  animationPlayStateKeywordValues,
+  animationTimingFunctionKeywordValues
 } from "./keyword-values"
 
 // 0.3s -> 300ms
@@ -45,29 +46,8 @@ const durationAndDelayParser = (value, res) => {
   return value
 }
 
-const commonParser = (key, value, flagFn, res) => {
-  let _res = ''
-  const segments = value.split(' ')
-
-  for (let i = 0, l = segments.length; i < l; i++) {
-    const segment = segments[i]
-
-    if (flagFn(segment)) {
-      _res += `${ segment } `
-      // don't use regexp, because '(' and '.'
-      value = value.replace(segment, '')
-    }
-  }
-
-  res[key] = _res ? _res.slice(0, -1) : 'unset'
-  // remove unnecessary white space
-  value = value.replace(/\s{2,}/g, ' ').trim()
-  
-  return value
-}
-
 const animationParser = value => {
-  let res = {
+  const res = {
     'animation-duration': 'unset',
     'animation-delay': 'unset',
     'animation-timing-function': 'unset',
@@ -79,7 +59,7 @@ const animationParser = value => {
   }
   const flagFnsMap = {
     'animation-timing-function' (v) {
-      return timingFunctionKeywordValues.hasOwnProperty(v) ||
+      return animationTimingFunctionKeywordValues.hasOwnProperty(v) ||
         /(.*?\(.*?\))/.test(v)
     },
 
@@ -88,15 +68,15 @@ const animationParser = value => {
     },
 
     'animation-direction' (v) {
-      return directionKeywordValues.hasOwnProperty(v)
+      return animationDirectionKeywordValues.hasOwnProperty(v)
     },
 
     'animation-fill-mode' (v) {
-      return fillModeKeywordValues.hasOwnProperty(v)
+      return animationFillModeKeywordValues.hasOwnProperty(v)
     },
 
     'animation-play-state' (v) {
-      return playStateKeywordValues.hasOwnProperty(v)
+      return animationPlayStateKeywordValues.hasOwnProperty(v)
     },
 
     'animation-name' (v) {
