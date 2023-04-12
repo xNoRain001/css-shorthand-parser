@@ -1,27 +1,13 @@
-// border: 1px solid red;
-const borderStyleStaticValues = {
-  hidden: null, 
-  dotted: null,
-  dashed: null,
-  solid: null,
-  double: null,
-  groove: null,
-  ridge: null,
-  inset: null,
-  outset: null
-}
-
-const borderWidthStaticValues = {
-  thin: null,
-  medium: null,
-  thick: null
-}
+import { 
+  borderStyleKeywordValues, 
+  borderWidthKeywordValues
+} from "./keyword-values"
 
 const isBorderWidth = v => {
-  return borderWidthStaticValues.hasOwnProperty(v) || /^[0-9]/.test(v[0])
+  return borderWidthKeywordValues.hasOwnProperty(v) || /^[0-9]/.test(v[0])
 }
 
-const isBorderStyle = v => borderStyleStaticValues.hasOwnProperty(v)
+const isBorderStyle = v => borderStyleKeywordValues.hasOwnProperty(v)
 
 const commonBorderParser = (value, prefix) => {
   let res = {}

@@ -17,6 +17,31 @@ const playStateKeywordValues = {
   paused: null
 }
 
+const borderStyleKeywordValues = {
+  hidden: null, 
+  dotted: null,
+  dashed: null,
+  solid: null,
+  double: null,
+  groove: null,
+  ridge: null,
+  inset: null,
+  outset: null
+}
+
+const borderWidthKeywordValues = {
+  thin: null,
+  medium: null,
+  thick: null
+}
+
+const listStyleTypeKeywordValues = {
+  disc: null,
+  circle: null,
+  square: null,
+  decimal: null
+}
+
 const timingFunctionKeywordValues = {
   ease: null,
   'ease-in': null,
@@ -27,9 +52,18 @@ const timingFunctionKeywordValues = {
   'step-end': null
 }
 
+const listStylePositionKeywordValues = {
+  inside: null,
+  outside: null
+}
+
 export {
   fillModeKeywordValues,
   directionKeywordValues,
   playStateKeywordValues,
-  timingFunctionKeywordValues
+  borderStyleKeywordValues,
+  borderWidthKeywordValues,
+  listStyleTypeKeywordValues,
+  timingFunctionKeywordValues,
+  listStylePositionKeywordValues
 }

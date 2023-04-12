@@ -1,18 +1,11 @@
-const listStylePositionStaticValues = {
-  inside: null,
-  outside: null
-}
+import { 
+  listStyleTypeKeywordValues,
+  listStylePositionKeywordValues 
+} from "./keyword-values"
 
-const listStyleTypeStaticValues = {
-  disc: null,
-  circle: null,
-  square: null,
-  decimal: null
-}
+const isListStylePosition = v => listStylePositionKeywordValues.hasOwnProperty(v)
 
-const isListStylePosition = v => listStylePositionStaticValues.hasOwnProperty(v)
-
-const isListStyleType = v => listStyleTypeStaticValues.hasOwnProperty(v)
+const isListStyleType = v => listStyleTypeKeywordValues.hasOwnProperty(v)
 
 const listStyleParser = value => {
   const res = {}
