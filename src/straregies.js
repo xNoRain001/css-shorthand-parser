@@ -1,5 +1,6 @@
 import { 
   flexParser,
+  animationParser,
   listStyleParser, 
   commonBorderParser, 
   commonDirectionParser
@@ -52,6 +53,10 @@ const strategies = {
 
   flex (value) {
     return flexParser(value)
+  },
+
+  animation (value) {
+    return animationParser(value)
   }
 }
 
