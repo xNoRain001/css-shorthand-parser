@@ -4,8 +4,15 @@
   "description": "Parse css shorthand prop.",
   "keywords": [
     "css-shorthand-parser",
-    "css"
+    "css",
+    "margin",
+    "padding",
+    "border",
+    "list-style",
+    "flex",
+    "animation"
   ],
+  "main": "./dist/css-shorthand-parser.min.js",
   "author": "xNoRain001",
   "repository": {
     "type": "git",
