@@ -26,10 +26,36 @@ const clipParser = res => {
 
 const positionAndSizeAndColorParser = (value, res) => {
   const segments = value.split(' ')
+  const index = value.indexOf('/')
 
-  if (value.includes('/')) {
+  if (index !== -1) {
     // must be background-position and background-size     
-    // may be backgroud-color
+    // may be background-color
+    res['background-position'] = value.slice(0, index)
+    value = value.slice(index + 1)
+    
+    const [v1, v2, v3] = value.split(' ')
+
+    if (v2) {
+      // background-size two-value syntax:
+      // background-size: 50% auto;
+      // background-size: 3em 25%;
+      // background-size: auto 6px;
+      // background-size: auto auto;
+      if (/\d+.*/.test(v2) || v2 === 'auto') {
+        res['background-size'] = `${ v1 } ${ v2 }`
+
+        if (v3) {
+          res['background-color'] = v3
+        }
+      } else {
+        res['background-size'] = v1
+        res['background-color'] = v2
+      }
+    } else {
+      // only background-size
+      res['background-size'] = v1
+    }
   } else {
     // must be background-position or background-color  
     const [v1] = segments
@@ -38,7 +64,6 @@ const positionAndSizeAndColorParser = (value, res) => {
       (backgroundPositionKeywordValues.hasOwnProperty(v1) || /^\d+/.test(v1))
 
     res[isPosition ? 'background-position' : 'background-color'] = v1
-    console.log(res)
   }
 }
 
