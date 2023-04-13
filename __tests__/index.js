@@ -833,6 +833,26 @@ test('test background', () => {
       'background-position': 'center',
       'background-size': 'auto auto',
       'background-color': 'rgb(0,0,0)'
+    },
+    'no-repeat center/80% url("../img/image.png")': {
+      'background-repeat': 'no-repeat',
+      'background-origin': 'unset',
+      'background-clip': 'unset',
+      'background-attachment': 'unset',
+      'background-image': 'url("../img/image.png")',
+      'background-position': 'center',
+      'background-size': '80%',
+      'background-color': 'unset' 
+    },
+    'scroll border-box center/50% auto no-repeat red': {
+      'background-repeat': 'no-repeat',
+      'background-origin': 'border-box',
+      'background-clip': 'border-box',
+      'background-attachment': 'scroll',
+      'background-image': 'unset',
+      'background-position': 'center',
+      'background-size': '50% auto',
+      'background-color': 'red' 
     }
   }
 

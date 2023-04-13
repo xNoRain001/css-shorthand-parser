@@ -26,40 +26,11 @@ import shorthandParser from 'css-shorthand-parser'
 ```
 
 ```js
-shorthandParser('margin', '10px 20px 30px') 
-// {
-//   'margin-top': '10px',
-//   'margin-right': '20px',
-//   'margin-bottom': '30px',
-//   'margin-left': '20px'
-// }
-
-shorthandParser('border', 'red 1px solid')
-// {
-//   'border-width': '1px',
-//   'border-style': 'solid',
-//   'border-color': 'red'
-// }
-
 shorthandParser('flex', '2') 
 // {
 //   'flex-grow': 2,
 //   'flex-shrink': 1,
 //   'flex-basis': "0",
-// }
-
-shorthandParser('flex', '10em') 
-// {
-//   'flex-grow': 1,
-//   'flex-shrink': 1,
-//   'flex-basis': '10em',
-// }
-
-shorthandParser('flex', '2 30px') 
-// {
-//   'flex-grow': 2,
-//   'flex-shrink': 1,
-//   'flex-basis': '30px',
 // }
 
 shorthandParser('animation', '3s 2 slidein')
@@ -84,5 +55,29 @@ shorthandParser('animation', '3s ease-in 1s 2 reverse both paused slidein')
 //   'animation-fill-mode': 'both',
 //   'animation-play-state': 'paused',
 //   'animation-name': 'slidein'
+// }
+
+shorthandParser('background', 'no-repeat center/80% url("../img/image.png")')
+// {
+//   'background-repeat': 'no-repeat',
+//   'background-origin': 'unset',
+//   'background-clip': 'unset',
+//   'background-attachment': 'unset',
+//   'background-image': 'url("../img/image.png")',
+//   'background-position': 'center',
+//   'background-size': '80%',
+//   'background-color': 'unset' 
+// }
+
+shorthandParser('background', 'scroll border-box center/50% auto no-repeat red')
+// {
+//   'background-repeat': 'no-repeat',
+//   'background-origin': 'border-box',
+//   'background-clip': 'border-box',
+//   'background-attachment': 'scroll',
+//   'background-image': 'unset',
+//   'background-position': 'center',
+//   'background-size': '50% auto',
+//   'background-color': 'red' 
 // }
 ```
