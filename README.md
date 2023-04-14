@@ -1,6 +1,6 @@
 ## Introduction
 
-Parse css shorthand prop.
+Parse css shorthand property.
 
 ## Installation
 
@@ -81,3 +81,23 @@ shorthandParser('background', 'scroll border-box center/50% auto no-repeat red')
 //   'background-color': 'red' 
 // }
 ```
+
+## Supported properties
+
+- margin
+
+- padding
+
+- border
+
+- list-style
+
+- flex
+
+- animation
+
+- backgroud
+
+- font
+
+- transition
