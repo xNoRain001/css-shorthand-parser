@@ -1,6 +1,6 @@
 {
   "name": "css-shorthand-parser",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Parse css shorthand prop.",
   "keywords": [
     "css-shorthand-parser",
@@ -12,7 +12,8 @@
     "flex",
     "animation",
     "backgroud",
-    "font"
+    "font",
+    "transition"
   ],
   "main": "./dist/css-shorthand-parser.min.js",
   "author": "xNoRain001",
