@@ -21,7 +21,7 @@ const formatTime = value => {
   return value
 }
 
-const durationAndDelayParser = (value, res) => {
+const durationAndDelayParser = (value, res, prefix) => {
   value = formatTime(value)
 
   let counter = 0
@@ -35,9 +35,9 @@ const durationAndDelayParser = (value, res) => {
     counter++
 
     if (counter === 1) {
-      res['animation-duration'] = $1
+      res[`${ prefix }-duration`] = $1
     } else if (counter === 2) {
-      res['animation-delay'] = $1
+      res[`${ prefix }-delay`] = $1
     }
 
     return ''
@@ -84,7 +84,7 @@ const animationParser = value => {
     }
   }
 
-  value = durationAndDelayParser(value, res)
+  value = durationAndDelayParser(value, res, 'animation')
 
   const keys = Object.keys(res)
   keys.splice(0, 2)
@@ -99,5 +99,7 @@ const animationParser = value => {
 
   return res
 }
+
+export { durationAndDelayParser }
 
 export default animationParser

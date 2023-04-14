@@ -4,6 +4,7 @@ import {
   animationParser,
   listStyleParser, 
   backgroundParser,
+  transitionParser,
   commonBorderParser, 
   commonDirectionParser
 } from "./parser"
@@ -70,7 +71,9 @@ const strategies = {
     return fontParser(value)
   },
   
-  // transition () {},
+  transition (value) {
+    return transitionParser(value)
+  },
 }
 
 export default strategies
