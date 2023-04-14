@@ -13,7 +13,7 @@ export default {
   plugins: [
     commonjs(),
     babel({ babelHelpers: 'bundled' }),
-    terser(),
+    // terser(),
     resolve()
   ],
   external: ['selector-specificity']

@@ -1,5 +1,6 @@
 import { 
   flexParser,
+  fontParser,
   animationParser,
   listStyleParser, 
   backgroundParser,
@@ -65,7 +66,9 @@ const strategies = {
     return backgroundParser(value)
   },
 
-  // font () {},
+  font (value) {
+    return fontParser(value)
+  },
   
   // transition () {},
 }

@@ -1,3 +1,28 @@
+const fontSizeKeywordValues = {
+  'xx-small': null,
+  'x-small': null,
+  small: null,
+  medium: null,
+  large: null,
+  'x-large': null,
+  'xx-large': null,
+  larger: null,
+  smaller: null
+}
+
+const fontStyleKeywordValues = {
+  normal: null,
+  italic: null,
+  oblique: null
+}
+
+const fontWeightKeywordValues = {
+  normal: null,
+  bold: null,
+  lighter: null,
+  bolder: null
+}
+
 const borderStyleKeywordValues = {
   hidden: null, 
   dotted: null,
@@ -100,6 +125,9 @@ const animationTimingFunctionKeywordValues = {
 }
 
 export {
+  fontSizeKeywordValues,
+  fontStyleKeywordValues,
+  fontWeightKeywordValues,
   borderStyleKeywordValues,
   borderWidthKeywordValues,
   listStyleTypeKeywordValues,

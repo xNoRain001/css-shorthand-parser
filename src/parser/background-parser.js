@@ -29,8 +29,8 @@ const positionAndSizeAndColorParser = (value, res) => {
   const index = value.indexOf('/')
 
   if (index !== -1) {
-    // must be background-position and background-size     
-    // may be background-color
+    // at least have background-position and background-size     
+    // may be have background-color
     res['background-position'] = value.slice(0, index)
     value = value.slice(index + 1)
     
