@@ -2,36 +2,31 @@ const isNumberStr = v => /^\d+$/.test(v)
 
 const oneValueParser = v => {
   if (v === 'initial') {
-    return threeValueParser(0, 1, 'auto')
+    return threeValueParser('0', '1', 'auto')
   }
 
   if (v === 'auto') {
-    return threeValueParser(1, 1, 'auto')
+    return threeValueParser('1', '1', 'auto')
   }
 
   if (v === 'none') {
-    return threeValueParser(0, 0, 'auto')
+    return threeValueParser('0', '0', 'auto')
   }
 
   if (isNumberStr(v)) {
-    return threeValueParser(Number(v), 1, "0")
+    return threeValueParser(v, '1', '0')
   }
 
-  return threeValueParser(1, 1, v)
+  return threeValueParser('1', '1', v)
 }
 
 const twoValueParser = (v1, v2) => {
-  v1 = Number(v1)
-
   return isNumberStr(v2) 
-    ? threeValueParser(v1, Number(v2), "0")
-    : threeValueParser(v1, 1, v2)
+    ? threeValueParser(v1, v2, '0')
+    : threeValueParser(v1, '1', v2)
 }
 
 const threeValueParser = (v1, v2, v3) => {
-  v1 = Number(v1)
-  v2 = Number(v2)
-
   return {
     'flex-grow': v1,
     'flex-shrink': v2,
