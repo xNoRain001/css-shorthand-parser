@@ -50,6 +50,10 @@ const strategies = {
     return commonDirectionParser(value, 'border', 'color')  
   },
 
+  'border-radius' (value) {
+    return commonDirectionParser(value, 'border', 'radius')  
+  },
+
   'list-style' (value) {
     return listStyleParser(value)
   },
