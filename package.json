@@ -1,7 +1,7 @@
 {
   "name": "css-shorthand-parser",
-  "version": "0.3.3",
-  "description": "Parse css shorthand prop.",
+  "version": "0.3.4",
+  "description": "Parse css shorthand properties.",
   "keywords": [
     "css-shorthand-parser",
     "css",
