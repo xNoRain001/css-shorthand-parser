@@ -3,35 +3,29 @@ const shorthandParser = require('../dist/css-shorthand-parser.min.js')
 test('border radius', () => {
   const t = {
     '1px': {
-      'border-top-radius': '1px',
-      'border-right-radius': '1px',
-      'border-bottom-radius': '1px',
-      'border-left-radius': '1px',
+      'border-top-left-radius': '1px',
+      'border-top-right-radius': '1px',
+      'border-bottom-right-radius': '1px',
+      'border-bottom-left-radius': '1px'
     },
-    '1px 2px': {
-      'border-top-radius': '1px',
-      'border-right-radius': '2px',
-      'border-bottom-radius': '1px',
-      'border-left-radius': '2px',
+    '10% 20%': {
+      'border-top-left-radius': '10%',
+      'border-top-right-radius': '20%',
+      'border-bottom-right-radius': '10%',
+      'border-bottom-left-radius': '20%'
     },
-    '1px 2px 3px': {
-      'border-top-radius': '1px',
-      'border-right-radius': '2px',
-      'border-bottom-radius': '3px',
-      'border-left-radius': '2px',
+    '0 0 50% 50%': {
+      'border-top-left-radius': '0',
+      'border-top-right-radius': '0',
+      'border-bottom-right-radius': '50%',
+      'border-bottom-left-radius': '50%'
     },
-    '1px 2px 3px 4px': {
-      'border-top-radius': '1px',
-      'border-right-radius': '2px',
-      'border-bottom-radius': '3px',
-      'border-left-radius': '4px',
-    },
-    '1px 2% 3em 4px': {
-      'border-top-radius': '1px',
-      'border-right-radius': '2%',
-      'border-bottom-radius': '3em',
-      'border-left-radius': '4px',
-    },
+    '0 0 10% 50%': {
+      'border-top-left-radius': '0',
+      'border-top-right-radius': '0',
+      'border-bottom-right-radius': '10%',
+      'border-bottom-left-radius': '50%'
+    }
   }
 
   for (const key in t) {

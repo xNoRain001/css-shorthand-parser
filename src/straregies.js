@@ -6,6 +6,7 @@ import {
   backgroundParser,
   transitionParser,
   commonBorderParser, 
+  borderRadiusParser,
   commonDirectionParser
 } from "./parser"
 
@@ -51,7 +52,7 @@ const strategies = {
   },
 
   'border-radius' (value) {
-    return commonDirectionParser(value, 'border', 'radius')  
+    return borderRadiusParser(value)
   },
 
   'list-style' (value) {
