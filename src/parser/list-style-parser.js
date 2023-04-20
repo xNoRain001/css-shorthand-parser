@@ -12,9 +12,9 @@ const listStyleParser = value => {
   const segments = value.split(' ')
   const { length } = segments
 
-  res['list-style-type'] = 'none'
-  res['list-style-position'] = 'none'
-  res['list-style-image'] = 'none'
+  res['list-style-type'] = 'unset'
+  res['list-style-position'] = 'unset'
+  res['list-style-image'] = 'unset'
   
   // TODO: support one or two value syntax
   if (length < 3) {
