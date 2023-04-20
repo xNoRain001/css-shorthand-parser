@@ -14,9 +14,9 @@ const commonBorderParser = (value, prefix) => {
   const segments = value.split(' ')
   const { length } = segments
 
-  res[`${ prefix }-width`] = 'none'
-  res[`${ prefix }-style`] = 'none'
-  res[`${ prefix }-color`] = 'none'
+  res[`${ prefix }-width`] = 'unset'
+  res[`${ prefix }-style`] = 'unset'
+  res[`${ prefix }-color`] = 'unset'
   
   // TODO: support one or two value syntax
   if (length < 3) {

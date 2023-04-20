@@ -3,14 +3,14 @@ const shorthandParser = require('../dist/css-shorthand-parser.min.js')
 test('border', () => {
   const t = {
     '1px': {
-      'border-width': 'none',
-      'border-style': 'none',
-      'border-color': 'none'
+      'border-width': 'unset',
+      'border-style': 'unset',
+      'border-color': 'unset'
     },
     '1px solid': {
-      'border-width': 'none',
-      'border-style': 'none',
-      'border-color': 'none'
+      'border-width': 'unset',
+      'border-style': 'unset',
+      'border-color': 'unset'
     },
     '1px solid red': {
       'border-width': '1px',
