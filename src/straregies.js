@@ -3,11 +3,12 @@ import {
   fontParser,
   animationParser,
   listStyleParser, 
+  transformParser,
   backgroundParser,
   transitionParser,
   commonBorderParser, 
   borderRadiusParser,
-  commonDirectionParser
+  commonDirectionParser,
 } from "./parser"
 
 const strategies = {
@@ -79,6 +80,10 @@ const strategies = {
   transition (value) {
     return transitionParser(value)
   },
+
+  transform (value) {
+    return transformParser(value)
+  }
 }
 
 export default strategies
