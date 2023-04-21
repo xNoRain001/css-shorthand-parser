@@ -1,12 +1,15 @@
 import strategies from "./straregies"
 
 const shorthandParser = (prop, value) => {
+  // remove unnecessary white space
   value = value
     .replace(/\s{2,}/g, ' ')
-    .replace(/\s?,\s?/g, ',') // rgb( 0 , 0, 0 ) -> rgb( 0,0,0 )
-    .replace(/\(\s?/g, '(') // rgb( 0,0,0 ) -> rgb(0,0,0 )
-    .replace(/\s?\)/g, ')') // rgb(0,0,0 ) -> rgb(0,0,0)
-    .replace(/\s?\/\s?/g, '/') // background: center / 80% -> background: center/80%
+    .replace(/\s?([,/])\s?/g, (_, $1) => $1)
+    .replace(/\s?,\s?/g, ',')
+    .replace(/\(\s?/g, '(')
+    .replace(/\s?\)/g, ')')
+    .replace(/\s?\/\s?/g, '/')
+    .trim()
 
   const straregy = strategies[prop]
   
