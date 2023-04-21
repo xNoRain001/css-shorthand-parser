@@ -2,15 +2,35 @@ const shorthandParser = require('../dist/css-shorthand-parser.min.js')
 
 test('list style', () => {
   const t = {
+    'none': {
+      'list-style-type': 'none',
+      'list-style-image': 'unset',
+      'list-style-position': 'unset'
+    },
     'disc': {
-      'list-style-type': 'unset',
+      'list-style-type': 'disc',
       'list-style-image': 'unset',
       'list-style-position': 'unset'
     },
     'disc url("")': {
-      'list-style-type': 'unset',
-      'list-style-image': 'unset',
+      'list-style-type': 'disc',
+      'list-style-image': 'url("")',
       'list-style-position': 'unset'
+    },
+    'disc none': {
+      'list-style-type': 'disc',
+      'list-style-image': 'none',
+      'list-style-position': 'unset'
+    },
+    'none url("")': {
+      'list-style-type': 'none',
+      'list-style-image': 'url("")',
+      'list-style-position': 'unset'
+    },
+    'none none inside': {
+      'list-style-type': 'none',
+      'list-style-image': 'none',
+      'list-style-position': 'inside'
     },
     'disc url("") inside': {
       'list-style-type': 'disc',
