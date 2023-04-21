@@ -1,6 +1,6 @@
 {
   "name": "css-shorthand-parser",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Parse css shorthand properties.",
   "keywords": [
     "css-shorthand-parser",
@@ -13,7 +13,8 @@
     "animation",
     "backgroud",
     "font",
-    "transition"
+    "transition",
+    "transform"
   ],
   "main": "./dist/css-shorthand-parser.min.js",
   "author": "xNoRain001",
