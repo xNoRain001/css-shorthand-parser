@@ -38,6 +38,10 @@ const strategies = {
 }
 
 const transformParser = value => {
+  if (value === 'none') {
+    return { transform: 'none' }
+  }
+  
   const res = {}
   const regexp = /(.*?)\((.*?)\)/
   
